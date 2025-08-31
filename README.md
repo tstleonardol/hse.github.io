@@ -297,24 +297,19 @@
             <div class="legend">
                 <h4>Escala de Avaliação (1-5):</h4>
                 <div class="legend-item">
-                    <span><strong>1 - Insatisfatório:</strong></span>
-                    <span>Não atende aos requisitos mínimos</span>
+                    <span><strong>1 - Insatisfatório:</strong>  Não atende aos requisitos mínimos</span>
                 </div>
                 <div class="legend-item">
-                    <span><strong>2 - Abaixo do Esperado:</strong></span>
-                    <span>Atende parcialmente, precisa de melhorias</span>
+                    <span><strong>2 - Abaixo do Esperado:</strong>  Atende parcialmente, precisa de melhorias</span>
                 </div>
                 <div class="legend-item">
-                    <span><strong>3 - Atende Expectativas:</strong></span>
-                    <span>Desempenho adequado e satisfatório</span>
+                    <span><strong>3 - Atende Expectativas:</strong>  Desempenho adequado e satisfatório</span>
                 </div>
                 <div class="legend-item">
-                    <span><strong>4 - Acima do Esperado:</strong></span>
-                    <span>Bom desempenho, supera expectativas</span>
+                    <span><strong>4 - Acima do Esperado:</strong>  Bom desempenho, supera expectativas</span>
                 </div>
                 <div class="legend-item">
-                    <span><strong>5 - Excepcional:</strong></span>
-                    <span>Excelente desempenho, referência para equipe</span>
+                    <span><strong>5 - Excepcional:</strong>  Excelente desempenho, referência para equipe</span>
                 </div>
             </div>
 
@@ -326,7 +321,7 @@
                     <div class="competency-header">Conhecimento Técnico</div>
                     <div class="competency-items">
                         <div class="competency-item">
-                            <div class="competency-desc">Domínio das NRs aplicáveis (NR-10, NR-12, NR-33, NR-34, NR-35)</div>
+                            <div class="competency-desc">Domínio das legislações e procedimentos aplicáveis</div>
                             <div class="rating-scale">
                                 <input type="radio" name="nr_knowledge" value="1">
                                 <input type="radio" name="nr_knowledge" value="2">
@@ -340,7 +335,7 @@
                         <div class="competency-item">
                             <div class="competency-desc">Identificação e análise de riscos offshore</div>
                             <div class="rating-scale">
-                                <input type="radio" name="risk_analysis" value="1">
+                                <input type="radio" id= "star1" name="risk_analysis" value="1">
                                 <input type="radio" name="risk_analysis" value="2">
                                 <input type="radio" name="risk_analysis" value="3">
                                 <input type="radio" name="risk_analysis" value="4">
@@ -350,7 +345,7 @@
                         </div>
                         
                         <div class="competency-item">
-                            <div class="competency-desc">Elaboração de PT (Permissão de Trabalho) e APR</div>
+                            <div class="competency-desc">Liberação de PT e participação em análises de riscos</div>
                             <div class="rating-scale">
                                 <input type="radio" name="permit_work" value="1">
                                 <input type="radio" name="permit_work" value="2">
@@ -483,7 +478,7 @@
                     <div class="competency-header">Características Específicas Offshore</div>
                     <div class="competency-items">
                         <div class="competency-item">
-                            <div class="competency-desc">Resistência física e mental para embarcações</div>
+                            <div class="competency-desc">Resistência física e mental para embarcações e plataformas</div>
                             <div class="rating-scale">
                                 <input type="radio" name="physical_resistance" value="1">
                                 <input type="radio" name="physical_resistance" value="2">
@@ -507,7 +502,7 @@
                         </div>
                         
                         <div class="competency-item">
-                            <div class="competency-desc">Convivência em espaço confinado</div>
+                            <div class="competency-desc">Convivência em se manter em ambientes confinados</div>
                             <div class="rating-scale">
                                 <input type="radio" name="confined_space" value="1">
                                 <input type="radio" name="confined_space" value="2">
@@ -767,9 +762,9 @@
             
             // Ações específicas baseadas nas áreas problemáticas
             const developmentActionsMap = {
-                'nr_knowledge': '📚 Treinamento intensivo em Normas Regulamentadoras aplicáveis',
+                'nr_knowledge': '📚 Treinamento intensivo em legislações e procedimentos',
                 'risk_analysis': '🔍 Capacitação em análise de riscos e metodologias HAZOP',
-                'permit_work': '📋 Workshop prático de elaboração de PT e APR',
+                'permit_work': '📋 Workshop prático de PT e análises de riscos',
                 'safety_equipment': '🛡️ Treinamento em equipamentos de segurança offshore',
                 'proactivity': '💡 Coaching para desenvolvimento de proatividade',
                 'compliance': '⚖️ Alinhamento sobre importância das demandas obrigatórias',
@@ -1135,9 +1130,9 @@
         function generateDetailedTableRows() {
             const competencies = {
                 'COMPETÊNCIAS TÉCNICAS DE SEGURANÇA': [
-                    ['Domínio das NRs aplicáveis (NR-10, NR-12, NR-33, NR-34, NR-35)', 'nr_knowledge'],
+                    ['Domínio das legislações e procedimentos aplicáveis', 'nr_knowledge'],
                     ['Identificação e análise de riscos offshore', 'risk_analysis'],
-                    ['Elaboração de PT (Permissão de Trabalho) e APR', 'permit_work'],
+                    ['Liberação de PT e participação em análises de riscos', 'permit_work'],
                     ['Conhecimento de equipamentos de segurança offshore', 'safety_equipment']
                 ],
                 'COMPETÊNCIAS COMPORTAMENTAIS': [
@@ -1152,9 +1147,9 @@
                     ['Gestão de conflitos e assertividade', 'conflict_management']
                 ],
                 'ADAPTAÇÃO AO AMBIENTE OFFSHORE': [
-                    ['Resistência física e mental para embarcações', 'physical_resistance'],
+                    ['Resistência física e mental para embarcações e plataformas', 'physical_resistance'],
                     ['Adaptação aos horários e rotinas offshore', 'schedule_adaptation'],
-                    ['Convivência em espaço confinado', 'confined_space'],
+                    ['Convivência em se manter em ambientes confinado', 'confined_space'],
                     ['Gestão do stress e pressão do ambiente', 'stress_management']
                 ],
                 'SATISFAÇÃO E ENGAJAMENTO': [
@@ -1238,7 +1233,7 @@
             
             return `
                 <div style="background: #fff3cd; border: 1px solid #ffeaa7; border-radius: 8px; padding: 20px; margin: 25px 0;">
-                    <h3 style="color: #2c3e50; margin-bottom: 15px;">📊 ANÁLISE DE RISCO DE ROTATIVIDADE</h3>
+                    <h3 style="color: #2c3e50; margin-bottom: 15px;">📊 ANÁLISE DE RISCO</h3>
                     <div style="display: grid; grid-template-columns: 150px 1fr; gap: 20px; align-items: center;">
                         <div style="text-align: center;">
                             <div style="font-size: 24px; font-weight: bold; color: ${riskColor};">${riskLevel}</div>
@@ -1255,9 +1250,9 @@
         
         function generateDevelopmentPlanForPDF() {
             const developmentActionsMap = {
-                'nr_knowledge': '📚 Treinamento intensivo em Normas Regulamentadoras aplicáveis',
-                'risk_analysis': '🔍 Capacitação em análise de riscos e metodologias HAZOP',
-                'permit_work': '📋 Workshop prático de elaboração de PT e APR',
+                'nr_knowledge': '📚 Treinamento intensivo em legislações e procedimentos aplicáveis',
+                'risk_analysis': '🔍 Capacitação em análise de riscos e outras metodologias',
+                'permit_work': '📋 Maior engajamento nas ferramentas de PT e análise de riscos',
                 'safety_equipment': '🛡️ Treinamento em equipamentos de segurança offshore',
                 'proactivity': '💡 Coaching para desenvolvimento de proatividade',
                 'compliance': '⚖️ Alinhamento sobre importância das demandas obrigatórias',
